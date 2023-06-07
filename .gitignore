@@ -1,0 +1,7 @@
+data/
+logging/
+slurm/
+thesauri/
+*.sh
+theasarus.py
+theasarus.txt
