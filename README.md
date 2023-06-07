@@ -25,7 +25,7 @@ This repo contains an implementation of [Automatic Retrieval and Clustering of S
 - [Installation](#installation)
 - [Usage](#usage)
 - [Visualisation](#visualisation)
-- [Example Output](#example-output)
+- [Examples](#example-output)
 
 
 ### Dataset
@@ -55,16 +55,19 @@ Then run the main script.
 python src/main.py
 ```
 
-### Visualisations
+### Visualisation
 
 ```
 python src/tools/similarity-tree.py --word money
+python src/tools/thesaurus.py --find_rnns 1
 ```
 
-#### Example output
+#### Examples
+
+Similarity tree:
 
 ```txt
-money
+ money
  |___ energy
  |    |___ information
  |    |___ power
@@ -105,4 +108,74 @@ money
  |    |___ resources
  |    |    |___ soldiers
  |    |    |    |___ men
+```
+
+RNNs, like in paper:
+
+```txt
+[(('1960s', '1970s'), 0.47),
+ (('weeks', 'months'), 0.45),
+ (('summer', 'winter'), 0.36),
+ (('radio', 'television'), 0.33),
+ (('%', 'percent'), 0.32),
+ (('temperature', 'pressure'), 0.31),
+ (('levels', 'temperatures'), 0.31),
+ (('month', 'week'), 0.3),
+ (('hours', 'minutes'), 0.3),
+ (('city', 'town'), 0.29),
+ (('report', 'study'), 0.29),
+ (('air', 'water'), 0.28),
+ (('people', 'men'), 0.27),
+ (('letters', 'words'), 0.27),
+ (('models', 'versions'), 0.27),
+ (('brother', 'wife'), 0.27),
+ (('data', 'information'), 0.26),
+ (('army', 'forces'), 0.26),
+ (('company', 'government'), 0.25),
+ (('development', 'growth'), 0.25),
+ (('games', 'films'), 0.25),
+ (('issues', 'problems'), 0.25),
+ (('education', 'training'), 0.24),
+ (('animals', 'plants'), 0.24),
+ (('system', 'network'), 0.24),
+ (('version', 'edition'), 0.24),
+ (('children', 'child'), 0.24),
+ (('security', 'health'), 0.24),
+ (('art', 'music'), 0.24),
+ (('song', 'album'), 0.24),
+ (('types', 'schools'), 0.24),
+ (('software', 'applications'), 0.24),
+ (('team', 'band'), 0.23),
+ (('economy', 'industry'), 0.23),
+ (('period', 'season'), 0.23),
+ (('man', 'woman'), 0.22),
+ (('name', 'title'), 0.22),
+ (('position', 'status'), 0.22),
+ (('access', 'ability'), 0.22),
+ (('characters', 'features'), 0.22),
+ (('release', 'election'), 0.21),
+ (('metal', 'rock'), 0.21),
+ (('century', 'era'), 0.21),
+ (('method', 'theory'), 0.21),
+ (('body', 'cell'), 0.21),
+ (('surface', 'ground'), 0.21),
+ (('aircraft', 'ships'), 0.2),
+ (('computer', 'video'), 0.2),
+ (('species', 'groups'), 0.2),
+ (('quality', 'performance'), 0.2),
+ (('form', 'style'), 0.19),
+ (('area', 'region'), 0.19),
+ (('concept', 'idea'), 0.19),
+ (('color', 'sound'), 0.19),
+ (('lack', 'fact'), 0.19),
+ (('society', 'culture'), 0.19),
+ (('operation', 'project'), 0.19),
+ (('plan', 'rules'), 0.19),
+ (('cities', 'regions'), 0.19),
+ (('services', 'operations'), 0.18),
+ (('countries', 'states'), 0.18),
+ (('agreement', 'decision'), 0.18),
+ (('example', 'evidence'), 0.18),
+ (('way', 'means'), 0.16),
+ (('light', 'signal'), 0.15)]
 ```
